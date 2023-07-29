@@ -17,7 +17,11 @@ from src.helpers.payload_manager import payload_create_booking, payload_create_a
     payload_patch_update_a_booking
 
 from src.helpers.utils import common_headers, common_headers_for_update_delete_patch
+'''
+command to run the test case in terminal inside integration_test directory ==> pytest -n auto -v -s --html=report.html
+ 
 
+'''
 
 class TestIntegration(object):
     @pytest.fixture
