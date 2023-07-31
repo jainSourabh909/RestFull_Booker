@@ -9,16 +9,17 @@ TC#3 = Verify the JSON Schema is Valid
 import requests
 import pytest
 
-from src.constants.apiConstants import url_create_booking, url_create_token, url_update_delete_booking
-from src.helpers.api_wrapper import post_request, put_request, delete_request, patch_request
-from src.helpers.common_verification import verify_http_method, verify_key_for_not_null_greater_then_zero, \
+from src_framework.constants.apiConstants import url_create_booking, url_create_token, url_update_delete_booking
+from src_framework.helpers.api_wrapper import post_request, put_request, delete_request, patch_request
+from src_framework.helpers.common_verification import verify_http_method, verify_key_for_not_null_greater_then_zero, \
     verfiy_token_len_greater_then_zero
-from src.helpers.payload_manager import payload_create_booking, payload_create_a_token, payload_put_update_a_booking, \
+from src_framework.helpers.payload_manager import payload_create_booking, payload_create_a_token, payload_put_update_a_booking, \
     payload_patch_update_a_booking
 
-from src.helpers.utils import common_headers, common_headers_for_update_delete_patch
+from src_framework.helpers.utils import common_headers, common_headers_for_update_delete_patch
 '''
-command to run the test case in terminal inside integration_test directory ==> pytest -n auto -v -s --html=report.html
+command to run the test case in terminal inside integration_test directory 
+==> pytest -n auto -v -s --html=report.html
  
 
 '''
