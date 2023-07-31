@@ -13,6 +13,7 @@ if we have import lot_dotenv class like this-->from dotenv import load_dotenv
 after that we have ton load it after that use it like below--
 after load it==>load_dotenv()
 get it voa os lib ==> os.getenv("token")
+**IMPORTANT-->Change the token if 403 Error is comming.
 '''
 
 @pytest.fixture
@@ -63,6 +64,7 @@ def test_put_update_booking(test_post_create_booking):
         "Cookie"  : temp_token
     }
     url_put = "https://restful-booker.herokuapp.com/booking/"+str(test_post_create_booking)
+    print("url_put-->",url_put)
     response = requests.put(url=url_put, json=payload, headers=headers)
     print("1-->",response.text)
     print("2-->", response.status_code)
